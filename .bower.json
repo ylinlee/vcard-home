@@ -1,0 +1,40 @@
+{
+  "name": "vcard-profile",
+  "version": "0.0.1",
+  "description": "Profile",
+  "private": true,
+  "authors": [
+    "YCLIN"
+  ],
+  "keywords": [
+    "web-components",
+    "polymer",
+    "vcard"
+  ],
+  "main": "vcard-profile.html",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vcard/vcard-profile.git"
+  },
+  "license": "MIT",
+  "ignore": [],
+  "dependencies": {
+    "promise-polyfill": "polymerlabs/promise-polyfill#^1.0.0",
+    "polymer": "Polymer/polymer#^1.0.0"
+  },
+  "devDependencies": {
+    "web-component-tester": "polymer/web-component-tester#^3.4.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "homepage": "https://github.com/ylinlee/vcard-profile",
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.1",
+    "commit": "5067ecaa2dbf99df12bbbe5bb138f400ee04699e"
+  },
+  "_source": "https://github.com/ylinlee/vcard-profile.git",
+  "_target": "0.0.1",
+  "_originalSource": "https://github.com/ylinlee/vcard-profile.git",
+  "_direct": true
+}
