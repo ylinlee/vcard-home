@@ -21,7 +21,7 @@
   "dependencies": {
     "promise-polyfill": "polymerlabs/promise-polyfill#^1.0.0",
     "polymer": "Polymer/polymer#^1.0.0",
-    "vcard-profile": "https://github.com/ylinlee/vcard-profile.git#0.0.1"
+    "vcard-profile": "git://github.com/ylinlee/vcard-profile.git#0.0.1"
   },
   "devDependencies": {
     "web-component-tester": "polymer/web-component-tester#^3.4.0",
