@@ -20,6 +20,6 @@
   "ignore": [],
   "dependencies": {
     "polymer": "Polymer/polymer#1.4.0",
-    "vcard-profile": "https://github.com/ylinlee/vcard-profile.git#0.0.1"
+    "vcard-profile": "https://github.com/ylinlee/vcard-profile.git#0.0.2"
   }
 }
