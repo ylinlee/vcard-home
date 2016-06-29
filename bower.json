@@ -1,6 +1,6 @@
 {
   "name": "vcard-home",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Home",
   "private": true,
   "authors": [
@@ -20,6 +20,6 @@
   "ignore": [],
   "dependencies": {
     "polymer": "Polymer/polymer#1.4.0",
-    "vcard-profile": "https://github.com/ylinlee/vcard-profile.git#0.0.2"
+    "vcard-profile": "https://github.com/ylinlee/vcard-profile.git#0.0.1"
   }
 }

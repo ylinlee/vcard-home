@@ -1,5 +1,6 @@
 <!-- Imports polymer -->
 <link rel="import" href="../polymer/polymer.html" />
+<link rel="import" href="../iron-media-query/iron-media-query.html">
 <link rel="import" href="../vcard-profile/vcard-profile.html" />
 <!-- Defines element markup -->
 <dom-module id="vcard-home">
@@ -118,38 +119,37 @@
             line-height: 30px;
         }
         
-        @media only screen and (min-width: 992px) {
-            .social a::before {
-                width: 0;
-                padding: 15px 0;
-                border-bottom: 1px solid #fff;
-                -webkit-transition: linear .2s;
-                -moz-transition: linear .2s;
-                -o-transition: linear .2s;
-                transition: linear .2s;
-                position: absolute;
-                content: '';
-                top: 0;
-                left: 0;
-            }
+        .social[media-query-992] a::before {
+            width: 0;
+            padding: 15px 0;
+            border-bottom: 1px solid #fff;
+            -webkit-transition: linear .2s;
+            -moz-transition: linear .2s;
+            -o-transition: linear .2s;
+            transition: linear .2s;
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
         }
         </style>
         <!-- Así mostramos las variables definidas {{}} -->
+        <iron-media-query query="(min-width: 992px)" query-matches="{{mediaQuery992}}"></iron-media-query>
         <div class="home-background parallax-section">
             <div class="container-fluid">
                 <div class="row">
                     <div class="home-box col-xs-12">
                         <div>
                             <img src="{{avatar}}" alt="avatar">
-                            <h1>{{nombre}}</h1>
-                            <p>{{puesto}}</p>
+                            <h1>{{info.fullname}}</h1>
+                            <p>{{info.job}}</p>
                         </div>
-                        <div class="social">
+                        <div class="social" media-query-992$="{{mediaQuery992}}">
                             <ul>
                                 <li><a href="https://www.linkedin.com/in/yichuanlinlee"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a href="https://github.com/ylinlee?tab=repositories"><i class="fa fa-github"></i></a></li>
                                 <li>
-                                    <vcard-profile></vcard-profile>
+                                    <vcard-profile info="{{info}}"></vcard-profile>
                                 </li>
                             </ul>
                         </div>
@@ -166,15 +166,14 @@
 Polymer({
     is: 'vcard-home', //Registramos el nombre del componente
     properties: { //Propiedades del componente
-        nombre: {
-            type: String, //Propiedad (o atributo) llamado 'nombre' de tipo String 
-            value: 'YCLIN' //y valor por defecto
-
-        },
-        puesto: {
-            type: String, //Propiedad (o atributo) llamado 'puesto' de tipo String 
-            value: 'Developer' //y valor por defecto
-
+        info: {
+            type: Object, //Propiedad (o atributo) llamado 'info' de tipo Object 
+            value: {
+                fullname: 'YCLIN',
+                job: 'Developer',
+                email: 'profile@vcard.com',
+                tlf: '123456789'
+            } //y valor por defecto
         },
         avatar: {
             type: String,
